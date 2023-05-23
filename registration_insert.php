@@ -14,7 +14,7 @@ $sql = "INSERT INTO users(name,user_id,email,password,mobile_no) VALUES ('$name'
 $result = $db->query($sql);
 
 if($result){
-    header('Location:registration_users.php');
+    header('Location:users.php');
 }
 else{
     echo "Data insert Fail!";

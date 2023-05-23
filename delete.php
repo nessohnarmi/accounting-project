@@ -8,5 +8,5 @@ $sql = "DELETE FROM users WHERE id='$id'";
 $result = $db->query($sql);
 
 if($result)
-    header('Location:registration_users.php');
+    header('Location:users.php');
 

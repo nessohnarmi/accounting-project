@@ -10,7 +10,7 @@
 
    
                       <div class="col-md-8">
-                            <h1><b>Registration page</b></h1><hr>
+                            <h1><b> User Registration page</b></h1><hr>
                             <form action="registration_insert.php" method="POST">
                                 <p>Name : <input name="name" type="text" class="form-control" placeholder="Enter your name"></p>
                                 <p>User Id : <input name="user_id" type="text" class="form-control" placeholder="Enter User Id"></p>
@@ -33,14 +33,7 @@
 
 
 
-<div class="row justify-content-center">
-        <div class="col-md-5">  
-                      <h5> <a class="btn btn-info" href="registration_users.php">  <b> Registration users page</b></a>  </h5>        
-        </div>
-    
 
-
-</div>
 
 
 
