@@ -14,7 +14,7 @@ if($data){
 }
 
 if(mysqli_num_rows($result)){
-    header('Location:index.php');
+    header('<Location:index.php');
 }
 else{
     echo "You are not registared member";
