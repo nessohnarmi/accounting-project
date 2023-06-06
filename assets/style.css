@@ -182,7 +182,7 @@ body {
 
 .app-content {
   padding: 16px;
-  background-color: var(--app-bg);
+  background-color: #ffffff;  
   height: 100%;
   flex: 1;
   max-height: 100%;

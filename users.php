@@ -1,45 +1,32 @@
-<?php include 'include/header.php'; ?>
-  <div class="app-content">
-    <div class="app-content-header">
-      <h1 class="app-content-headerText">Users</h1>
-      <!-- <button class="app-content-headerButton"href="registration.php">Add User</button> -->
-      <h5> <a class="btn btn-info" href="registration.php">  <b> users page</b></a>  </h5>        
-    </div>
-    <?php  
-include 'include/connection.php';  
-$sql = "SELECT * FROM users";
+<?php 
+
+
+include 'include/connection.php'; 
+include 'include/header.php'; 
+
+$sql ="SELECT * FROM users" ;
 $result = $db->query($sql);
-  ?>
 
-  <center>
+session_start();
+if(isset( $_SESSION['id'] )):
 
-<!-- Page wrapper  -->
-<!-- ============================================================== -->
-<div class="page-wrapper">
-    <!-- ============================================================== -->
-    <!-- Bread crumb and right sidebar toggle -->
-    <!-- ============================================================== -->
-    <div class="page-breadcrumb bg-white">
-        <div class="row align-items-center">
-            <div class="col-md-12">
-                <h3 class="page-title"> User  page</h3>
+?>
+
+<div class="app-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <h2>Users</h2>                
+            </div>
+            <div class="col-md-2">
+            <a href="registration.php" class="btn btn-success">Add New</a>
             </div>
         </div>
-        <!-- /.col-lg-12 -->
-    </div><br><br>
-    <!-- ============================================================== -->
-    <!-- End Bread crumb and right sidebar toggle -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Container fluid  -->
-    <!-- ============================================================== -->
+    </div>    
     <div class="container-fluid">
-        <!-- ============================================================== -->
-        <!-- Three charts -->
-        <!-- ============================================================== -->
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <table class="table table-striped table-bordered table-hover">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table ">
                     <thead>
                         <th><b>ID</b></th>
                         <th><b>Name</b></th>
@@ -51,8 +38,7 @@ $result = $db->query($sql);
                     </thead>
                     <tbody>
                     <?php while($row = $result->fetch_assoc()): ?>
-                      <tr>
-                       
+                        <tr>                        
                             <td><?php echo $row['id'] ; ?></td>
                             <td><?php echo $row['name'] ; ?></td>
                             <td><?php echo $row['user_id'] ; ?></td>
@@ -61,24 +47,23 @@ $result = $db->query($sql);
                             <td><?php echo $row['mobile_no'] ; ?></td>
                         <td>
                             <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
-                       
+                        
                             <a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
                         </td>
-                     </tr>
+                        </tr>
                         <?php endwhile; ?>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-
-    
 </div>
+<?php 
+else:
+    header('Location:login.php');
+  
+  endif;
 
+include 'include/footer.php'; 
 
-
-
-  </div>
-  </center>
-
-  <?php include 'include/footer.php'; ?>
+?>
