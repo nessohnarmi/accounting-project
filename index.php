@@ -1,6 +1,15 @@
-<?php include 'include/header.php'; 
-session_start();
-if(isset( $_SESSION['id'] )):
+<?php 
+error_reporting(0);
+ob_start();
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+if(!isset($_SESSION['id'])){
+header('Location:login.php');
+}
+ob_end_clean();
+
+include 'include/header.php'; 
 ?>
   <div class="app-content">
     <div class="app-content-header">
@@ -11,13 +20,8 @@ if(isset( $_SESSION['id'] )):
   </div>
 
 <?php 
+header('Location:login.php');
 
-else:
-  header('Location:login.php');
-
-endif;
-
-include 'include/footer.php'; 
 ?>
 
 

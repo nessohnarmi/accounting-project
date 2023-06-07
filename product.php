@@ -13,7 +13,7 @@ ob_end_clean();
 include 'include/header.php'; 
 include 'include/connection.php'; 
 
-$sql ="SELECT * FROM users" ;
+$sql ="SELECT * FROM Products" ;
 $result = $db->query($sql);
 
 
@@ -23,10 +23,10 @@ $result = $db->query($sql);
     <div class="container">
         <div class="row">
             <div class="col-md-10">
-                <h2>Users</h2>                
+                <h2>Product</h2>                
             </div>
             <div class="col-md-2">
-            <a href="registration.php" class="btn btn-success">Add New</a>
+            <a href="Product_add.php" class="btn btn-success">Add New</a>
             </div>
         </div>
     </div>    
@@ -36,26 +36,21 @@ $result = $db->query($sql);
                 <table class="table ">
                     <thead>
                         <th><b>ID</b></th>
-                        <th><b>Name</b></th>
-                        <th><b>User Id</b></th>
-                        <th><b>Email </b></th>
-                        <th><b>Password</b></th>
-                        <th><b>Mobile No</b> </th>
-                        <th><b>Action</b></th>
+                        <th><b> Product Name</b></th>
+                        <th><b>Description</b></th>
+                       
                     </thead>
                     <tbody>
                     <?php while($row = $result->fetch_assoc()): ?>
                         <tr>                        
                             <td><?php echo $row['id'] ; ?></td>
                             <td><?php echo $row['name'] ; ?></td>
-                            <td><?php echo $row['user_id'] ; ?></td>
-                            <td><?php echo $row['email'] ; ?></td>
-                            <td><?php echo $row['password'] ; ?></td>
-                            <td><?php echo $row['mobile_no'] ; ?></td>
-                        <td>
-                            <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
+                            <td><?php echo $row['description'] ; ?></td>
                         
-                            <a href="delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+                        <td>
+                            <a href="Product_edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
+                        
+                            <a href="Product_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
                         </td>
                         </tr>
                         <?php endwhile; ?>

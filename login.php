@@ -23,7 +23,7 @@
                             <br />
                             <div class="mb-3">
                                 <label for="" class="form-label">Password</label>
-                                <input type="text" class="form-control" name="password" aria-describedby="helpId" placeholder="Enter the password" />
+                                <input type="password" class="form-control" name="password" aria-describedby="helpId" placeholder="Enter the password" />
                             </div>
                             <br />
                             <div class="md-3">
