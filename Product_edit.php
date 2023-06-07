@@ -39,7 +39,7 @@
               <div class="col-md-6">
                
                     <form action="update-Product.php" method="POST">
-                <input type="hidden" name="id" value="<?php echo $id; ?>">
+                            <input type="hidden" name="id" value="<?php echo $id; ?>">
                         <p>Product Name : <input name="name" type="text" value="<?php echo $data['name'] ; ?>" class="form-control" placeholder="Enter your name"></p>
                         <p>Description  : <input name="description" type="text" value="<?php echo $data['description'] ; ?>" class="form-control" placeholder="Enter User description "></p>
                 
