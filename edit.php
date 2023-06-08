@@ -36,7 +36,7 @@
         <!-- Three charts -->
         <!-- ============================================================== -->
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-12">
                
                     <form action="update-registration.php" method="POST">
                             <input type="hidden" name="id" value="<?php echo $id; ?>">
