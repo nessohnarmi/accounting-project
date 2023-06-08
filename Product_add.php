@@ -16,7 +16,7 @@ $result = $db->query($sql);
                 <h2>Product Add</h2>                
             </div>
             <div class="col-md-2">
-            <a href="users.php" class="btn btn-success">All users Product</a>
+            <a href="product.php" class="btn btn-success">All users Product</a>
             </div>
         </div>
         <div class="row">

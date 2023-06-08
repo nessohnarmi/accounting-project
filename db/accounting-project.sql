@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 08, 2023 at 06:36 AM
+-- Generation Time: Jun 08, 2023 at 07:23 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -24,27 +24,15 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `accouts`
---
-
-CREATE TABLE `accouts` (
-  `id` int(11) NOT NULL,
-  `item_descrip` varchar(500) NOT NULL,
-  `trasaction_type` varchar(500) NOT NULL,
-  `date` varchar(500) NOT NULL,
-  `amount` varchar(500) NOT NULL,
-  `description` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `products`
 --
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `name` varchar(500) NOT NULL,
+  `product_id` varchar(500) NOT NULL,
+  `buy_rate` varchar(500) NOT NULL,
+  `initial_quantity` varchar(500) NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -52,37 +40,9 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `description`) VALUES
-(1, 'computer', 'hnad'),
-(2, 'mouse', 'jnp');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `purchaes`
---
-
-CREATE TABLE `purchaes` (
-  `id` int(11) NOT NULL,
-  `date` varchar(500) NOT NULL,
-  `price` varchar(500) NOT NULL,
-  `description` text NOT NULL,
-  `qty` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sale`
---
-
-CREATE TABLE `sale` (
-  `id` int(11) NOT NULL,
-  `date` varchar(500) NOT NULL,
-  `qty` varchar(500) NOT NULL,
-  `price` varchar(500) NOT NULL,
-  `description` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `products` (`id`, `name`, `product_id`, `buy_rate`, `initial_quantity`, `description`) VALUES
+(1, 'computer', '0', '', '', ''),
+(2, 'mouse', '0', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -112,27 +72,9 @@ INSERT INTO `users` (`id`, `name`, `user_id`, `email`, `password`, `mobile_no`) 
 --
 
 --
--- Indexes for table `accouts`
---
-ALTER TABLE `accouts`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `purchaes`
---
-ALTER TABLE `purchaes`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `sale`
---
-ALTER TABLE `sale`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -146,28 +88,10 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `accouts`
---
-ALTER TABLE `accouts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `purchaes`
---
-ALTER TABLE `purchaes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `sale`
---
-ALTER TABLE `sale`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
