@@ -34,7 +34,7 @@ $result = $db->query($sql);
                 <p>Email : <input name="email" type="email" class="form-control" placeholder="Enter your email" required></p>
                 <p>Password: <input name="password" type="password" class="form-control" placeholder="Enter the password" required></p>
                 <p>Mobile No : <input name="mobile_no" type="number" placeholder="Enter your mobile no" class="form-control"></p>
-                <!-- <p>Image : <input name="image" type="image" placeholder="Enter your mobile no" class="form-control"></p> -->
+
                 <button type="submit" class="btn btn-success">Submit</button>
                 <button type="reset" class="btn btn-danger">Reset</button>
                 </form>

@@ -37,7 +37,7 @@ $result = $db->query($sql);
                     <thead>
                         <th><b>ID</b></th>
                         <th><b>Name</b></th>
-                        <th><b>User Id</b></th>
+                       
                         <th><b>Email </b></th>
                         <th><b>Password</b></th>
                         <th><b>Mobile No</b> </th>
@@ -48,7 +48,7 @@ $result = $db->query($sql);
                         <tr>                        
                             <td><?php echo $row['id'] ; ?></td>
                             <td><?php echo $row['name'] ; ?></td>
-                            <td><?php echo $row['user_id'] ; ?></td>
+                       
                             <td><?php echo $row['email'] ; ?></td>
                             <td><?php echo $row['password'] ; ?></td>
                             <td><?php echo $row['mobile_no'] ; ?></td>

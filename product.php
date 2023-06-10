@@ -26,7 +26,8 @@ $result = $db->query($sql);
                 <h2>Product</h2>                
             </div>
             <div class="col-md-2">
-            <a href="Product_add.php" class="btn btn-success">Add New</a>
+            <!-- <a href="Product_add.php" class="btn btn-success">Add New</a> -->
+            <a href="Product_in.php" class="btn btn-success">Product In</a>
             </div>
         </div>
     </div>    
@@ -38,7 +39,7 @@ $result = $db->query($sql);
                         <th><b>ID</b></th>
                         <th><b>Product Name</b></th>
                         <th><b>Image</b></th>
-                        <th><b>Product_id</b></th>
+                        <th><b>Product Id</b></th>
                         <th><b>Buy Rate</b></th>
                         <th><b>Initial Quantity</b></th>
                         <th><b>Description</b></th>
@@ -56,7 +57,7 @@ $result = $db->query($sql);
                             <td><?php echo $row['description'] ; ?></td>
                         
                         <td>
-                            <a href="Product_edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
+                            <!-- <a href="Product_edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a> -->
                         
                             <a href="Product_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
                         </td>

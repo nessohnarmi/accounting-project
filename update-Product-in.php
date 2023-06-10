@@ -20,7 +20,7 @@ $result = $db->query($sql);
 if($result){
 
 //  if(move_uploaded_file($_FILES['image']['tmp_name'], $target)){
-      header('Location:product.php',' Location:product_in.php');
+      header('Location:product_in.php','Location:product.php');
     
   }
 //  }
