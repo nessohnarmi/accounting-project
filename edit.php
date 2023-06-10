@@ -13,18 +13,16 @@
 
 <!-- Page wrapper  -->
 <!-- ============================================================== -->
-<div class="page-wrapper">
+<div class="app-content">
     <!-- ============================================================== -->
     <!-- Bread crumb and right sidebar toggle -->
     <!-- ============================================================== -->
-    <div class="page-breadcrumb bg-white">
-        <div class="row align-items-center">
-            <div class="col-md-12">
-                <h2 class="page-title">Edit Page</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <h2>Edit Page</h2>  <hr>              
             </div>
         </div>
-        <!-- /.col-lg-12 -->
-    </div>
     <!-- ============================================================== -->
     <!-- End Bread crumb and right sidebar toggle -->
     <!-- ============================================================== -->
@@ -41,7 +39,7 @@
                     <form action="update-registration.php" method="POST">
                             <input type="hidden" name="id" value="<?php echo $id; ?>">
                         <p>Name : <input name="name" type="text" value="<?php echo $data['name'] ; ?>" class="form-control" placeholder="Enter your name"></p>
-                        <p>User Id : <input name="user_id" type="text" value="<?php echo $data['user_id'] ; ?>" class="form-control" placeholder="Enter User Id"></p>
+                    
                         <p>Email : <input name="email" type="email"  value="<?php echo $data['email'] ; ?>" class="form-control" placeholder="Enter your email" required></p>
                         <p>Password: <input name="password" type="password" value="<?php echo $data['password'] ; ?>" class="form-control" placeholder="Enter the password" required></p>
                         <p>Mobile No : <input name="mobile_no" value="<?php echo $data['mobile_no'] ; ?>" type="number" placeholder="Enter your mobile no" class="form-control"></p>

@@ -30,7 +30,7 @@ $result = $db->query($sql);
             <div class="col-md-12">
                 <form action="registration_insert.php" method="POST">
                 <p>Name : <input name="name" type="text" class="form-control" placeholder="Enter your name"></p>
-                <p>User Id : <input name="user_id" type="text" class="form-control" placeholder="Enter User Id"></p>
+                
                 <p>Email : <input name="email" type="email" class="form-control" placeholder="Enter your email" required></p>
                 <p>Password: <input name="password" type="password" class="form-control" placeholder="Enter the password" required></p>
                 <p>Mobile No : <input name="mobile_no" type="number" placeholder="Enter your mobile no" class="form-control"></p>
