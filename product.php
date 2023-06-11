@@ -23,12 +23,17 @@ $result = $db->query($sql);
 <div class="app-content">
     <div class="container">
         <div class="row">
-            <div class="col-md-10">
+            <div class="col-md-8">
                 <h2>Product</h2>                
             </div>
             <div class="col-md-2">
             <!-- <a href="Product_add.php" class="btn btn-success">Add New</a> -->
-            <a href="Product_in.php" class="btn btn-success">Product In</a>
+                    <a href="Product_in.php" class="btn btn-success">Product In</a>
+                    
+            </div>
+            <div class="col-md-2">
+            <!-- <a href="Product_add.php" class="btn btn-success">Add New</a> -->      
+                    <a href="Product_out.php" class="btn btn-danger">Product Out</a>
             </div>
         </div>
     </div>    

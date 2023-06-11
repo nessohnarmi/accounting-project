@@ -42,6 +42,7 @@ $result = $db->query($sql);
                         <th><b>Date</b></th>
                         <th><b>Buy Rate</b></th>
                         <th><b>Initial Quantity</b></th>
+                        <!-- <th><b>Type</b></th> -->
                         <th><b>Description</b></th>
                        
                     </thead>
@@ -55,12 +56,13 @@ $result = $db->query($sql);
                             <td><?php echo $row['date'] ; ?></td> 	 
                             <td><?php echo $row['buy_rate'] ; ?></td>
                             <td><?php echo $row['initial_quantity'] ; ?></td>
+                            <!-- <td><?php echo $row['type'] ; ?></td> -->
                             <td><?php echo $row['description'] ; ?></td>
                         
                         <td>
                             <a href="Product-in_edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">In</a>
                         
-                            
+                            <!-- <a href="export_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a> -->
                         </td>
                         </tr>
                         <?php endwhile; ?>

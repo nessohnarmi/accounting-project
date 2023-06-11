@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2> Products In Page</h2>  <hr>              
+                <h2> Products Out Page</h2>  <hr>              
             </div>
         </div>
     <!-- ============================================================== -->
@@ -37,7 +37,7 @@
             <div class="row">
               <div class="col-md-12">
                
-                    <form action="update-Product-in.php" method="POST">
+                    <form action="update-Product-out.php" method="POST">
                             <input type="hidden" name="id" value="<?php echo $id; ?>">
                         <p>Product Name : <input name="name" type="text" value="<?php echo $data['name'] ; ?>" class="form-control" placeholder="Enter your name"></p>
                         <p>Image : <input type="file"  name="image" id="image"  value="<?php echo $data['image'] ; ?>" class="form-control" ></p>

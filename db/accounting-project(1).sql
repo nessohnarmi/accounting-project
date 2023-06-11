@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2023 at 08:58 AM
+-- Generation Time: Jun 11, 2023 at 06:06 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -60,19 +60,20 @@ CREATE TABLE `products` (
   `buy_rate` varchar(500) NOT NULL,
   `initial_quantity` varchar(11) NOT NULL,
   `description` text NOT NULL,
-  `date` date NOT NULL
+  `date` date NOT NULL,
+  `type` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `image`, `product_id`, `buy_rate`, `initial_quantity`, `description`, `date`) VALUES
-(49, 'computer', '', '78 ', '50000 ', '3', 'good', '2023-06-07'),
-(51, 'Mouse', '', '464 ', '500 ', '4', 'good', '2023-06-08'),
-(52, 'SSD', '', '95 ', '2000 ', '2', 'good', '2023-06-09'),
-(76, 'Hard dive', '', '45 ', '4500 ', '2', 'good', '2023-06-10'),
-(77, 'Cable', '', '48 ', '200 ', '1', 'good', '2023-06-11');
+INSERT INTO `products` (`id`, `name`, `image`, `product_id`, `buy_rate`, `initial_quantity`, `description`, `date`, `type`) VALUES
+(49, 'computer', '', '78 ', '50000 ', '3', 'good', '2023-06-07', 'in'),
+(51, 'Mouse', '', '464 ', '500 ', '2', 'good', '2023-06-08', 'out'),
+(52, 'SSD', '', '95 ', '2000 ', '2', 'good', '2023-06-09', 'in'),
+(76, 'Hard dive', '', '45 ', '4500 ', '2', 'good', '2023-06-10', 'in'),
+(77, 'Cable', '', '48 ', '200 ', '1', 'good', '2023-06-11', 'out');
 
 -- --------------------------------------------------------
 
@@ -132,7 +133,7 @@ ALTER TABLE `exports`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
 
 --
 -- AUTO_INCREMENT for table `users`

@@ -16,7 +16,7 @@ $result = $db->query($sql);
                 <h2>Product Add</h2>                
             </div>
             <div class="col-md-2">
-            <a href="product_in.php" class="btn btn-success">All users Product</a>
+            <a href="product_out.php" class="btn btn-success">All users Product</a>
             </div>
         </div>
         <div class="row">
@@ -28,7 +28,7 @@ $result = $db->query($sql);
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <form action="product-in_insert.php" method="POST">
+                <form action="product-out_insert.php" method="POST">
                    
                     <p>Product Name : <input name="name" type="text" class="form-control" placeholder="Enter your name"></p>
                     <p><b>Image :</b>  <input type="file" value=""  name="image" id="image"  class="form-control" placeholder="Enter Image"/></p>
