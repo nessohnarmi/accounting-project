@@ -11,15 +11,19 @@ ob_end_clean();
 
 include 'include/header.php'; 
 ?>
-  <div class="app-content">
-    <div class="app-content-header">
-      <h1 class="app-content-headerText">Home</h1>
-      
-    </div>
-  </div>
+<div class="app-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Home page  </h2>      <hr>          
+            </div>
+           
+        </div>
+    </div>  
 
 <?php 
 header('Location:login.php');
+
 
 ?>
 
