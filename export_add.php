@@ -4,7 +4,7 @@
 include 'include/connection.php'; 
 include 'include/header.php'; 
 
-$sql ="SELECT * FROM products" ;
+$sql ="SELECT * FROM exports" ;
 $result = $db->query($sql);
 
 ?>
@@ -13,10 +13,10 @@ $result = $db->query($sql);
     <div class="container">
         <div class="row">
             <div class="col-md-10">
-                <h2>Product Add</h2>                
+                <h2> Export Products</h2>                
             </div>
             <div class="col-md-2">
-            <a href="product_in.php" class="btn btn-success">All users Product</a>
+            <a href="export.php" class="btn btn-success">All Export Product</a>
             </div>
         </div>
         <div class="row">
@@ -28,7 +28,7 @@ $result = $db->query($sql);
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <form action="product-in_insert.php" method="POST">
+                <form action="export_insert.php" method="POST">
                    
                     <p>Product Name : <input name="name" type="text" class="form-control" placeholder="Enter your name"></p>
                     <p><b>Image :</b>  <input type="file" value=""  name="image" id="image"  class="form-control" placeholder="Enter Image"/></p>

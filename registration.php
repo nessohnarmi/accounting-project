@@ -25,7 +25,8 @@ $result = $db->query($sql);
             </div>
         </div>
     </div>    
-    <div class="container-fluid">
+    <!-- <div class="container-fluid"> -->
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <form action="registration_insert.php" method="POST">

@@ -39,6 +39,7 @@ $result = $db->query($sql);
                         <th><b>Product Name</b></th>
                         <th><b>Image</b></th>
                         <th><b>Product_id</b></th>
+                        <th><b>Date</b></th>
                         <th><b>Buy Rate</b></th>
                         <th><b>Initial Quantity</b></th>
                         <th><b>Description</b></th>
@@ -50,7 +51,8 @@ $result = $db->query($sql);
                             <td><?php echo $row['id'] ; ?></td>
                             <td><?php echo $row['name'] ; ?></td>
                             <td><img src="<?php echo "images/".$row['image'] ; ?>"width="50" alt=""></td>
-                            <td><?php echo $row['product_id'] ; ?></td> 	 
+                            <td><?php echo $row['product_id'] ; ?></td> 
+                            <td><?php echo $row['date'] ; ?></td> 	 
                             <td><?php echo $row['buy_rate'] ; ?></td>
                             <td><?php echo $row['initial_quantity'] ; ?></td>
                             <td><?php echo $row['description'] ; ?></td>

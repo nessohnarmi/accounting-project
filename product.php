@@ -14,6 +14,7 @@ include 'include/header.php';
 include 'include/connection.php'; 
 
 $sql ="SELECT * FROM Products" ;
+
 $result = $db->query($sql);
 
 
