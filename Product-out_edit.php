@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2> Products Out Page</h2>  <hr>              
+                <h2> Products Sale Page</h2>  <hr>              
             </div>
         </div>
     <!-- ============================================================== -->

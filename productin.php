@@ -23,7 +23,7 @@ $result = $db->query($sql);
     <div class="container">
         <div class="row">
             <div class="col-md-10">
-                <h2>Product In</h2>  <hr>  <br><br><br><br><br>             
+                <h2>Product Purchase Page</h2>  <hr>  <br><br><br><br><br>             
             </div>
             
         </div>

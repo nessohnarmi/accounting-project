@@ -12,7 +12,7 @@ $type                = $_POST['type'];
 $description         = $_POST['description'];
 
 
-$sql = "INSERT INTO Products(name,image,product_id,date,buy_rate,initial_quantity,type,description ) VALUES ('$name','$image','$product_id ','$date','$buy_rate ','$initial_quantity',$type ,'$description')" ;
+$sql = "INSERT INTO Products(name,image,product_id,date,buy_rate,initial_quantity,type,description ) VALUES ('$name','$image','$product_id ','$date','$buy_rate ','$initial_quantity','$type','$description')" ;
 
 
 $result = $db->query($sql);

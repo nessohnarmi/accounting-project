@@ -48,6 +48,7 @@ $result = $db->query($sql);
                         <th><b>Product Id</b></th>
                         <th><b>Buy Rate</b></th>
                         <th><b>Initial Quantity</b></th>
+                        <!-- <th><b>Type</b></th> -->
                         <th><b>Description</b></th>
                        
                     </thead>
@@ -60,6 +61,7 @@ $result = $db->query($sql);
                             <td><?php echo $row['product_id'] ; ?></td> 	 
                             <td><?php echo $row['buy_rate'] ; ?></td>
                             <td><?php echo $row['initial_quantity'] ; ?></td>
+                            <!-- <td><?php echo $row['type'] ; ?></td>  -->
                             <td><?php echo $row['description'] ; ?></td>
                         
                         <td>
