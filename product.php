@@ -13,7 +13,7 @@ ob_end_clean();
 include 'include/header.php'; 
 include 'include/connection.php'; 
 
-$sql ="SELECT * FROM Products" ;
+$sql ="SELECT * FROM Products ORDER BY id DESC" ;
 
 $result = $db->query($sql);
 
@@ -21,19 +21,13 @@ $result = $db->query($sql);
 ?>
 
 <div class="app-content">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8">
-                <h2>Product</h2>                
+            <div class="col-md-10">
+                <h2>Products</h2>                
             </div>
             <div class="col-md-2">
-            <!-- <a href="Product_add.php" class="btn btn-success">Add New</a> -->
-                    <a href="Product_in.php" class="btn btn-success">Product In</a>
-                    
-            </div>
-            <div class="col-md-2">
-            <!-- <a href="Product_add.php" class="btn btn-success">Add New</a> -->      
-                    <a href="Product_out.php" class="btn btn-danger">Product Out</a>
+                <a href="Product_add.php" class="btn btn-success">Add New Product</a>
             </div>
         </div>
     </div>    
@@ -45,11 +39,11 @@ $result = $db->query($sql);
                         <th><b>ID</b></th>
                         <th><b>Product Name</b></th>
                         <th><b>Image</b></th>
-                        <th><b>Product Id</b></th>
-                        <th><b>Buy Rate</b></th>
-                        <th><b>Initial Quantity</b></th>
-                        <!-- <th><b>Type</b></th> -->
-                        <th><b>Description</b></th>
+                        <th><b>Purchase Price</b></th>
+                        <th><b>Sale Price</b></th>
+                        <th><b>Initial Quantity</b></th>                        
+                        <th><b>Status</b></th>
+                        <th><b>Action</b></th>
                        
                     </thead>
                     <tbody>
@@ -57,16 +51,13 @@ $result = $db->query($sql);
                         <tr>                        
                             <td><?php echo $row['id'] ; ?></td>
                             <td><?php echo $row['name'] ; ?></td>
-                            <td><img src="<?php echo "images/".$row['image'] ; ?>"width="50" alt=""></td>
-                            <td><?php echo $row['product_id'] ; ?></td> 	 
-                            <td><?php echo $row['buy_rate'] ; ?></td>
+                            <td> <img src="<?php echo $row['image']; ?>" width="50px" height="50px"> </td>
+                            <td>BDT. <?php echo $row['purchase_price'] ; ?>.00</td> 	 
+                            <td>BDT. <?php echo $row['sale_price'] ; ?>.00</td> 	 
                             <td><?php echo $row['initial_quantity'] ; ?></td>
-                            <!-- <td><?php echo $row['type'] ; ?></td>  -->
-                            <td><?php echo $row['description'] ; ?></td>
-                        
+                            <td><?php echo $row['status'] ; ?></td>                   
                         <td>
-                            <!-- <a href="Product_edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a> -->
-                        
+                            <a href="Product_edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
                             <a href="Product_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
                         </td>
                         </tr>

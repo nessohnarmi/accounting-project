@@ -4,7 +4,7 @@
 include 'include/connection.php'; 
 include 'include/header.php'; 
 
-$sql ="SELECT * FROM products" ;
+$sql ="SELECT * FROM purchase" ;
 $result = $db->query($sql);
 
 ?>
@@ -32,27 +32,21 @@ $result = $db->query($sql);
                 <form action="product_insert.php" method="POST" enctype="multipart/form-data">
                     
                     <div class="form-group">
-                        <label for="">Product name:</label>
-                        <input name="name" type="text" class="form-control" placeholder="Enter product name">
+                        <label for="">Date:</label>
+                        <input name="date" type="date" class="form-control" placeholder="Enter  Date">
                     </div>
 
-                    <div class="form-group">
-                        <label for="">Product image:</label>
-                        
-                        <p><input type="file" value=""  name="image" id="image"/></p>
-                        <p class="text-success">Upload product image</p>
-                    </div>
 
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label for="">Purchase price:</label>
-                                <input name="purchase_price" type="number" class="form-control" placeholder="Enter the purchase price">
+                                <label for="">Product name:</label>
+                                <input name="name" type="text" class="form-control" placeholder="Enter product name">
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label for="">Sale price:</label>
+                                <label for="">:</label>
                                 <input name="sale_price" type="number" class="form-control" placeholder="Enter product sale price">
                             </div>
                         </div>

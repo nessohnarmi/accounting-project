@@ -2,29 +2,29 @@
 include 'include/connection.php';  
 
 $name                = $_POST['name'];
-// $image               = $_FILES['image']['name'];
-// $target              ="images/".basename($image);
-$product_id          = $_POST['product_id'];
-$buy_rate            = $_POST['buy_rate'];
-$initial_quantity    = $_POST['initial_quantity'];
-$description         = $_POST['description'];
 
+// Image Code
+$target_file = "images/products/";
+$image = $target_file . basename($_FILES["image"]["name"]);
 
-$sql = "INSERT INTO Products(name,image,product_id,buy_rate,initial_quantity,description ) VALUES ('$name','$image','$product_id ','$buy_rate ','$initial_quantity','$description')" ;
+$purchase_price       = $_POST['purchase_price'];
+$sale_price           = $_POST['sale_price'];
+$initial_quantity     = $_POST['initial_quantity'];
+$description          = $_POST['description'];
+$status = "In Stock" ;
+
+$sql = "INSERT INTO Products(name,image,purchase_price,sale_price,initial_quantity,description,status ) VALUES ('$name','$image','$purchase_price ','$sale_price ','$initial_quantity','$description','$status')" ;
 
 
 $result = $db->query($sql);
 
 if($result){
-    // if(move_uploaded_file($_FILES['image']['tmp_name'], $target)){
-        header('Location:product.php',' Location:producy_in.php');
-       echo "Data insert successful!";
+
+    if(move_uploaded_file($_FILES["image"]["tmp_name"], $image)){
+
+        header('Location:product.php');
     }
-  
-   
- 
-// }
-else{
-    echo "Data insert Fail!";
+
 }
+
 
