@@ -4,7 +4,7 @@
 include 'include/connection.php'; 
 include 'include/header.php'; 
 
-$sql ="SELECT * FROM purchase" ;
+$sql ="SELECT * FROM sale" ;
 $result = $db->query($sql);
 
 ?>
@@ -13,10 +13,10 @@ $result = $db->query($sql);
     <div class="container">
         <div class="row">
             <div class="col-md-10">
-                <h2>Add New Product</h2>                
+                <h2>Add Sale Product</h2>                
             </div>
             <div class="col-md-2">
-            <a href="product.php" class="btn btn-success">All Products</a>
+            <a href="product.php" class="btn btn-success">All Sale Products</a>
             </div>
         </div>
         <div class="row">
@@ -29,7 +29,7 @@ $result = $db->query($sql);
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <form action="Purchase_insert.php" method="POST" enctype="multipart/form-data">
+                <form action="sale_insert.php" method="POST" enctype="multipart/form-data">
                     
                             
                     <div class="row">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 16, 2023 at 10:41 AM
+-- Generation Time: Jun 16, 2023 at 08:13 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -31,10 +31,17 @@ CREATE TABLE `accounts` (
   `id` int(11) NOT NULL,
   `date` date NOT NULL,
   `description` text NOT NULL,
-  `Account_book` text NOT NULL,
+  `account_book` text NOT NULL,
   `debit` int(255) NOT NULL,
   `credit` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `accounts`
+--
+
+INSERT INTO `accounts` (`id`, `date`, `description`, `account_book`, `debit`, `credit`) VALUES
+(6, '2023-06-13', 'LUX sale', ' ', 50, 0);
 
 -- --------------------------------------------------------
 
@@ -58,7 +65,8 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `image`, `initial_quantity`, `purchase_price`, `sale_price`, `status`, `description`) VALUES
-(136, 'LUX', 'images/products/Lux_Soap.jpg', 1, 45, 50, 'In Stock', '');
+(136, 'LUX', 'images/products/Lux_Soap.jpg', 1, 45, 50, 'In Stock', ''),
+(139, 'Lifebuoy', '', 1, 50, 54, 'In Stock', '');
 
 -- --------------------------------------------------------
 
@@ -71,8 +79,16 @@ CREATE TABLE `purchase` (
   `date` date NOT NULL,
   `product_name` text NOT NULL,
   `qty` int(255) NOT NULL,
-  `price` int(255) NOT NULL
+  `price` int(255) NOT NULL,
+  `status` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `purchase`
+--
+
+INSERT INTO `purchase` (`id`, `date`, `product_name`, `qty`, `price`, `status`) VALUES
+(7, '2023-06-13', 'LUX ', 1, 39, 'In Stock');
 
 -- --------------------------------------------------------
 
@@ -85,8 +101,16 @@ CREATE TABLE `sale` (
   `date` date NOT NULL,
   `product_name` text NOT NULL,
   `qty` int(255) NOT NULL,
-  `price` int(255) NOT NULL
+  `price` int(255) NOT NULL,
+  `status` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `sale`
+--
+
+INSERT INTO `sale` (`id`, `date`, `product_name`, `qty`, `price`, `status`) VALUES
+(1, '2023-06-19', 'LUX ', 1, 50, 'Out Stock');
 
 -- --------------------------------------------------------
 
@@ -104,6 +128,13 @@ CREATE TABLE `stock` (
   `sale_qty` int(255) NOT NULL,
   `sale_price` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `stock`
+--
+
+INSERT INTO `stock` (`id`, `product_name`, `purchase_product_price`, `purchase_qty`, `purchase_price`, `sale_product_price`, `sale_qty`, `sale_price`) VALUES
+(1, 'LUX ', 45, 1, 45, 50, 1, 50);
 
 -- --------------------------------------------------------
 
@@ -176,31 +207,31 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
 
 --
 -- AUTO_INCREMENT for table `purchase`
 --
 ALTER TABLE `purchase`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `sale`
 --
 ALTER TABLE `sale`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `stock`
 --
 ALTER TABLE `stock`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`

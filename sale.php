@@ -13,7 +13,7 @@ ob_end_clean();
 include 'include/header.php'; 
 include 'include/connection.php'; 
 
-$sql ="SELECT * FROM purchase" ;
+$sql ="SELECT * FROM sale" ;
 
 $result = $db->query($sql);
 
@@ -24,10 +24,10 @@ $result = $db->query($sql);
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-10">
-                <h2>purchase Products</h2>                
+                <h2> sale Products</h2>                
             </div>
             <div class="col-md-2">
-                <a href="purchase_add.php" class="btn btn-success">Add New Product</a>
+                <a href="sale_add.php" class="btn btn-success">Add New Product</a>
             </div>
         </div>
     </div>    
@@ -55,8 +55,8 @@ $result = $db->query($sql);
                             <td>BDT. <?php echo $row['price'] ; ?>.00</td> 
                             <td><?php echo $row['status'] ; ?></td> 	                    
                         <td>
-                            <a href="purchase_edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
-                            <a href="purchase_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+                            <a href="sale_edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
+                            <a href="sale_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
                         </td>
                         </tr>
                         <?php endwhile; ?>
