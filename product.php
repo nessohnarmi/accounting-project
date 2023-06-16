@@ -13,7 +13,7 @@ ob_end_clean();
 include 'include/header.php'; 
 include 'include/connection.php'; 
 
-$sql ="SELECT * FROM Products ORDER BY id DESC" ;
+$sql ="SELECT * FROM Products " ;
 
 $result = $db->query($sql);
 

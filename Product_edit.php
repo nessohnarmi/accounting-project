@@ -39,15 +39,56 @@
                
                     <form action="update-Product.php" method="POST">
                             <input type="hidden" name="id" value="<?php echo $id; ?>">
-                        <p>Product Name : <input name="name" type="text" value="<?php echo $data['name'] ; ?>" class="form-control" placeholder="Enter your name"></p>
-                        <p>Image : <input type="file"  name="image" id="image"  value="<?php echo $data['image'] ; ?>" class="form-control" ></p>
-                        <p>Product Id  : <input name="product_id" type="text" value="<?php echo $data['product_id'] ; ?>" class="form-control" placeholder="Enter User product id "></p>
-                        <p>Buy Rate  : <input name="buy_rate" type="text" value="<?php echo $data['buy_rate'] ; ?>" class="form-control" placeholder="Enter User buy rate "></p>
-                       
-                        <p>Description  : <input name="description" type="text" value="<?php echo $data['description'] ; ?>" class="form-control" placeholder="Enter User description "></p>
-                
-                        <button type="submit" class="btn btn-success">Submit</button>
-                        <button type="reset" class="btn btn-danger">Reset</button>
+
+                            <div class="form-group">
+                                <label for="">Product name :</label>
+                                <input name="name" type="text" value="<?php echo $data['name'] ; ?>" class="form-control" placeholder="Enter product name">
+                            </div>
+
+                                    
+                            <div class="form-group">
+                                <label for="">Product image :</label>
+                                
+                                <p><input type="file" value="<?php echo $data['image'];?>"  name="image" id="image"/></p>
+                                <p class="text-success">Upload product image</p>
+                            </div>
+
+                            
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="">Purchase price :</label>
+                                        <input name="purchase_price" type="number"  value="<?php echo $data['purchase_price'] ; ?>" class="form-control" placeholder="Enter the purchase price">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="">Sale price :</label>
+                                        <input name="sale_price" type="number" value="<?php echo $data['sale_price'] ; ?>" class="form-control" placeholder="Enter product sale price">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="">Initial Qty :</label>
+                                        <input name="initial_quantity" type="text" value="<?php echo $data['initial_quantity'] ; ?>"class="form-control" placeholder="Enter product initial qty">
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+
+                            <div class="form-group">
+                                        <label for="">Product description :</label>
+                                        <textarea name="description" id="" cols="30" rows="2" placeholder="Enter the product description" type="text" value="<?php echo $data['description'] ; ?>"class="form-control"></textarea>
+                            </div>
+
+
+                    
+                                <button type="submit" class="btn btn-success">Submit</button>
+                                <button type="reset" class="btn btn-danger">Reset</button>
                     </form>
                </div>
             </div>

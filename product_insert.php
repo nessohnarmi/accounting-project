@@ -5,7 +5,7 @@ $name                = $_POST['name'];
 
 // Image Code
 $target_file = "images/products/";
-$image = $target_file . basename($_FILES["image"]["name"]);
+$image       = $target_file . basename($_FILES["image"]["name"]);
 
 $purchase_price       = $_POST['purchase_price'];
 $sale_price           = $_POST['sale_price'];
@@ -24,6 +24,7 @@ if($result){
 
         header('Location:product.php');
     }
+    
 
 }
 
