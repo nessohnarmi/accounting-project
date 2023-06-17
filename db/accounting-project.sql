@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 16, 2023 at 08:13 PM
+-- Generation Time: Jun 17, 2023 at 04:50 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -41,7 +41,8 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`id`, `date`, `description`, `account_book`, `debit`, `credit`) VALUES
-(6, '2023-06-13', 'LUX sale', ' ', 50, 0);
+(6, '2023-06-13', 'LUX sale', ' ', 50, 0),
+(7, '2023-06-20', 'LUX Purchase', ' ', 0, 45);
 
 -- --------------------------------------------------------
 
@@ -66,7 +67,13 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `name`, `image`, `initial_quantity`, `purchase_price`, `sale_price`, `status`, `description`) VALUES
 (136, 'LUX', 'images/products/Lux_Soap.jpg', 1, 45, 50, 'In Stock', ''),
-(139, 'Lifebuoy', '', 1, 50, 54, 'In Stock', '');
+(140, 'Lifebuoy', 'images/products/Lifebuoy.jpg', 1, 50, 53, 'In Stock', ''),
+(141, 'Foog Perfume', 'images/products/Foog Perfume.jpg', 1, 225, 240, 'In Stock', ''),
+(144, 'Ice cool powder', 'images/products/Ice cool powder.jpg', 1, 45, 55, 'In Stock', ''),
+(145, 'Vaseline ', 'images/products/Vaseline.png', 1, 250, 260, 'In Stock', ''),
+(146, 'Meril Lip gel', 'images/products/Meril Lip gel.jpg', 1, 45, 50, 'In Stock', ''),
+(147, 'Bady Lotion', 'images/products/Bady Lotion.jpg', 1, 220, 230, 'In Stock', ''),
+(148, 'Dove Shampoo', 'images/products/Dove Shampoo.jpg', 1, 200, 210, 'In Stock', '');
 
 -- --------------------------------------------------------
 
@@ -207,31 +214,31 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=149;
 
 --
 -- AUTO_INCREMENT for table `purchase`
 --
 ALTER TABLE `purchase`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `sale`
 --
 ALTER TABLE `sale`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `stock`
 --
 ALTER TABLE `stock`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
