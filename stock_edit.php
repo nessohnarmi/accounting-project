@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10">
-                <h2>  purchase sProducts Edit Page</h2>  <hr>              
+                <h2> Stock Edit Page</h2>  <hr>              
             </div>
         </div>
     <!-- ============================================================== -->
