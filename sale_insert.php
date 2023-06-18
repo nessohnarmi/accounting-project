@@ -6,7 +6,7 @@ $product_name         = $_POST['product_name'];
 $qty                  = $_POST['qty'];
 $price                =$_POST['price'];
 
-$status               = "Out Stock" ;
+$status               = "In Stock" ;
 
 $sql = "INSERT INTO sale(date,product_name,qty,price,status ) VALUES ('$date','$product_name ','$qty ','$price','$status')" ;
 

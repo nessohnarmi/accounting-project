@@ -16,7 +16,7 @@ $result = $db->query($sql);
                 <h2>Add New Accounts</h2>                
             </div>
             <div class="col-md-2">
-            <a href="product.php" class="btn btn-success">All Accounts</a>
+            <a href="accounts.php" class="btn btn-success">All Accounts</a>
             </div>
         </div>
         <div class="row">
