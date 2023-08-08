@@ -1,4 +1,4 @@
-<?php include 'include/header.php' ; ?>
+
 
 <main>
   <h1>Login Page</h1><hr>
@@ -23,8 +23,7 @@
       </div>
     </div>
   </div>
-  
 
 
 </main>
-<?php include 'include/footer.php' ; ?>
+ 
