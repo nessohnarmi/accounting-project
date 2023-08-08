@@ -1,16 +1,16 @@
-<?php 
-error_reporting(0);
-ob_start();
-if (session_status() === PHP_SESSION_NONE) {
-  session_start();
-}
-if(!isset($_SESSION['id'])){
-header('Location:login.php');
-}
-ob_end_clean();
+<!-- <?php 
+// error_reporting(0);
+// ob_start();
+// if (session_status() === PHP_SESSION_NONE) {
+//   session_start();
+// }
+// if(!isset($_SESSION['id'])){
+// header('Location:login.php');
+// }
+// ob_end_clean();
 
-include 'include/header.php'; 
-?>
+// include 'include/header.php'; 
+// ?>
 <div class="app-content">
     <div class="container">
         <div class="row">
@@ -20,11 +20,11 @@ include 'include/header.php';
            
         </div>
     </div>  
-
+<!-- 
 <?php 
-header('Location:login.php');
+// header('Location:login.php'); -->
 
 
-?>
+?> -->
 
 

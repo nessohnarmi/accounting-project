@@ -24,7 +24,7 @@ if($result){
 
         header('Location:product.php');
     }
-    
+
 
 }
 
